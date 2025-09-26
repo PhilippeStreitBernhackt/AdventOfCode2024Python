@@ -1,5 +1,4 @@
-def main():
-    print("Hello, Advent of Code 2024!")
+from day01 import day01task01    
 
 if __name__ == "__main__":
-    main()
+    day01task01()
