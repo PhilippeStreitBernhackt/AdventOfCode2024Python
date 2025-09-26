@@ -1,7 +1,7 @@
 import re
 from loadfile import read_file
 
-def day01task01():
+def day01task01_02():
     file_lines = read_file("input/day01.txt")
     first_numbers = list()
     second_numbers = list()
@@ -17,5 +17,10 @@ def day01task01():
     difference = 0   
     for x in range(len(first_numbers)):
         difference = difference + abs(first_numbers[x] - second_numbers[x])
-        
-    print(difference)
+    
+    similarity_score = 0
+    for x in range(len(first_numbers)):
+        similarity_score += first_numbers[x] * second_numbers.count(first_numbers[x])
+
+    print("Difference:" + str(difference))
+    print("Similarity Score:" + str(similarity_score))
